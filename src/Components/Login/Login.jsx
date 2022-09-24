@@ -1,17 +1,47 @@
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import React from 'react'
+import React, { useState } from 'react'
 import { google, or } from '../../Components'
-import  {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 
-const Login = ( { visible , onClose} ) => {
+const Login = ( { visible , onClose } ) => {
+
+  const navigate = useNavigate()
+
+  const [form, setForm] = useState ({
+    Email: '',
+    Password: '',
+  })
+
+  const [error, setError] = useState('')
+
+
+  const handleForm = (e) => {
+    setForm({
+      ...form,
+      [e.target.Name]: e.target.value,
+    })
+  }
+
+  const handleSbumit = (e) => {
+    e.preventDefault()
+    if(!form.Email || !form.Password) return setError('field is required..')
+    setError('')
+    navigate()
+  }
+
+
+
 
   const LoginWindow = (e) => {
     if(e.target.id === 'Login') onClose()
   }
 
   if(!visible) return null;
+
+
+  
 
 
   return (
@@ -32,21 +62,18 @@ const Login = ( { visible , onClose} ) => {
           <img src={or} alt="/" className='absolute left-[30%] my-[10px]' />
         </div>
         <div className='mt-[40px]'>
-          <form>
-            <label htmlFor="email">
-              <input type="email" name='email' placeholder='E-mail' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' />
-            </label>
-            <label htmlFor="Password">
-              <input type="Password" name='Password' placeholder='Password' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' />
-            </label>
-
-            <Link to='/dashboard'>
-              <div>
-                <button className=' w-full bg-[#356DFB] mt-[15px] py-[10px] rounded-[30px] text-[#FFFFFF] cursor-pointer '>Sign In</button>
-              </div>
-            </Link>
-           
-
+          <form onSubmit={handleSbumit}>
+            <div>
+              <input onChange={handleForm} value={form.Email} type="email" name='email' placeholder='E-mail' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' />
+              <p>{error}</p>
+            </div>
+            <div>
+              <input onChange={handleForm} value={form.Password} type="Password" name="Password" placeholder='Password' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' />
+              <p>{error}</p>
+            </div>
+            <div>
+              <button type='submit' className=' w-full bg-[#356DFB] mt-[15px] py-[10px] rounded-[30px] text-[#FFFFFF] cursor-pointer '>Sign In</button>
+            </div>
             <p className='pt-[26px] text-center font-roboto font-[400] text-[12px] leading-[14px] '>Don’t have an account? <span className='text-[#356DFB]'>Sign up here</span> </p>
             
           </form>

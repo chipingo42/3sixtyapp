@@ -1,18 +1,24 @@
 import React from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { google, or } from '../../Components'
-import { Link } from 'react-router-dom'
+
 
 
 
 const Signup = ( { visible , onClose } ) => {
 
+
+  
+
   const signupWindow = (e) => {
     if(e.target.id === 'signup') onClose()
   }
 
-  
   if(!visible) return null;
+
+
+  
+
 
 
 
@@ -33,28 +39,25 @@ const Signup = ( { visible , onClose } ) => {
             </a>
             <img src={or} alt="/" className='absolute left-[30%] my-[10px]' />
           </div>
-          <div className='mt-[40px]'>
-            <form>
-              <label htmlFor="Name">
-                <input type="name" name='name' placeholder='Name' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' required />
-              </label>
-              <label htmlFor="Username">
-                <input type="Username" name='Username' placeholder='Username' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' required />
-              </label>
-              <label htmlFor="email">
-                <input type="email" name='email' placeholder='E-mail' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' required />
-              </label>
-              <label htmlFor="Password">
-                <input type="Password" name='Password' placeholder='Password' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  ' required />
-              </label>
-              <Link to='/dashboard'>
-                <div>
-                  <button className=' w-full bg-[#356DFB] mt-[15px] py-[10px] rounded-[30px] text-[#FFFFFF] cursor-pointer '>Sign Up</button>
-                </div>
-              </Link>
-              <p className='pt-[26px] text-center font-roboto font-[400] text-[12px] leading-[14px] '>Already have an account? <span className='text-[#356DFB]'>Sign in here</span> </p>
-            </form>
-          </div>
+          <form className='mt-[40px]' >
+            <div>
+              <input type="name" name='name' placeholder='Name' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  '  />
+            </div>
+            <div>
+              <input type="Username" name='Username' placeholder='Username' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  '  />
+            </div>
+            <div>
+              <input type="name" name='name' placeholder='E-mail' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  '  />
+            </div>
+            <div>
+              <input  type="email" name='email' placeholder='Password' className=' border border-[#DEDFEC] mt-[15px] w-full py-[10px] pl-[17px] rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px]  '  />
+            </div>
+            
+            <div>
+              <button className=' w-full bg-[#356DFB] mt-[15px] py-[10px] rounded-[30px] text-[#FFFFFF] cursor-pointer '>Sign Up</button>
+            </div>
+            <p className='pt-[26px] text-center font-roboto font-[400] text-[12px] leading-[14px] '>Already have an account? <span className='text-[#356DFB]'>Sign in here</span> </p>
+          </form>
         </div>
       </div>
     </div>
