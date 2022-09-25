@@ -9,23 +9,25 @@ const Dashboard = () => {
   const [popup1, setPopup1] = useState(false)
   const [popup2, setPopoup2] = useState(false)
   const [createNote, setCreateNote] = useState(false)
+  const [deleteNote, setDeleteNote] = useState(false)
 
 
   const handlePop1 = () => setPopup1(true)
   const handlePopup2 = () => setPopoup2(true)
   const handleCreate = () => setCreateNote(true)
-  
-
+  const handleDelete = () => setDeleteNote(true)
 
 
   const handlePop1Close = () => setPopup1(false)
   const handlePop2Close = () => setPopoup2(false)
   const handleCreateClose = () => setCreateNote(false)
+  const handleDeleteClose = () => setDeleteNote(false)
+
 
 
   return (
     <>
-      <div className='bg-[#ffffff] w-full h-[68px]'>
+      <div className='bg-[#ffffff] w-full h-[68px]'>   
         <div className='mx-[30px]'>
           <div className='flex  space-x-36'>
             <h1 className=' font-grupo font-[400] text-[36px] leading-[35px] pt-[14px] text-[#000000]'>3Sixty</h1>
@@ -36,6 +38,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
 
       <div className='bg-[#F7FBFD] w-full h-[69px] border border-solid border-[#EEEEEE]'>
         <div className='mx-[30px]'>
@@ -73,9 +76,9 @@ const Dashboard = () => {
               <button  className='bg-[#356DFB] px-[12px] py-[8px] rounded-r-[30px] font-roboto font-[400] text-[16px] text-[#ffffff]' onClick={handleCreate} >Create Note</button>
             </div>
           </div>
-
         </div>
       </div>
+
 
 
 
@@ -196,9 +199,9 @@ const Dashboard = () => {
       </div>
 
       <Popup1 visible={popup1} onClose={handlePop1Close} />
-      <Popup2 visible={popup2} onClose={handlePop2Close} />
+      <Popup2 visible={popup2} onClick={deleteNote} onClose={handlePop2Close} />
       <CreateNote visible={createNote} onClose={handleCreateClose} />
-      <Delete />
+      <Delete visible={handleDelete} onClose={handleDeleteClose} />
       <Edit />
     </>
   )
