@@ -10,18 +10,22 @@ const Dashboard = () => {
   const [popup2, setPopoup2] = useState(false)
   const [createNote, setCreateNote] = useState(false)
   const [deleteNote, setDeleteNote] = useState(false)
+  const [editNote, setEditNote] = useState(false)
+
 
 
   const handlePop1 = () => setPopup1(true)
   const handlePopup2 = () => setPopoup2(true)
   const handleCreate = () => setCreateNote(true)
   const handleDelete = () => setDeleteNote(true)
+  const handleEdit = () => setEditNote(true)
 
-
+  
   const handlePop1Close = () => setPopup1(false)
   const handlePop2Close = () => setPopoup2(false)
   const handleCreateClose = () => setCreateNote(false)
   const handleDeleteClose = () => setDeleteNote(false)
+  const handleEditClose = () => setEditNote(false)
 
 
 
@@ -199,10 +203,10 @@ const Dashboard = () => {
       </div>
 
       <Popup1 visible={popup1} onClose={handlePop1Close} />
-      <Popup2 visible={popup2} onClick={deleteNote} onClose={handlePop2Close} />
+      <Popup2 visible={popup2} onClick={handleDelete} onclickEdit={handleEdit} onClose={handlePop2Close} />
       <CreateNote visible={createNote} onClose={handleCreateClose} />
-      <Delete visible={handleDelete} onClose={handleDeleteClose} />
-      <Edit />
+      <Delete visible={deleteNote} onClose={handleDeleteClose} />
+      <Edit visible={editNote} onClose={handleEditClose} />
     </>
   )
 }

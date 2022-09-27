@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         grupo: ['Gruppo'],
         lato: ['Lato'],
-        open_san: ['Open Sans'],
+        san: ['Open Sans'],
         roboto: ['Roboto'],
         nunito: ['Nunito']
       },

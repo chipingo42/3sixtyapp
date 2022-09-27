@@ -1,11 +1,18 @@
 import React from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-const Edit = () => {
+const Edit = ({ visible, onClose }) => {
+  
+  const editwindow = (e) => {
+    if(e.target.id === 'edit') onClose()
+  }
+  if(!visible) return null;
+
+
   return (
-    <div className='absolute top-0 bg-[#00000033] w-full h-[100vh]  hidden'>
+    <div  id='edit' onClick={editwindow} className='absolute top-0 bg-[#00000033] w-full h-[100vh]'>
       <div className='relative top-[10%] left-[30%] bg-white w-[454px] h-[572px] rounded-[10px] shadow-2xl '>
-       <XMarkIcon className='absolute right-[12px] top-[20px] w-5 text-[#777777]' />
+       <XMarkIcon onClick={onClose} className='absolute right-[12px] top-[20px] w-5 text-[#777777]' />
         <div className='px-[15px] py-[14px]'>
           <h1 className='pt-[4px] font-roboto font-[700] text-[18px] text-[#000000] '>Edit Note</h1>
         </div><hr />

@@ -30,7 +30,7 @@ const CreateNote = ({visible, onClose }) => {
               <input type="text" placeholder='note tag' className=' block border border-[#DEDFEC] w-full h-[42px] rounded-[10px]  pl-[7px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:text-[#CCCCCC] ' />
             </div>
             <div className='px-[20px] py-[12px]'>
-              <label htmlFor="Note">Note</label>
+              <label htmlFor="Note" className='font-roboto font-[700] text-[14px] text-[#000000]'>Note</label>
               <textarea name="Note" id="Note" cols="30" rows="7" placeholder='note body' className='block border pl-[7px] pt-[10px] border-[#DEDFEC] w-full rounded-[10px] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px]'></textarea>
             </div>
             <button className='mx-[20px] mt-[27px] px-[32px] py-[8px] rounded-[30px] text-[#FFFFFF] bg-[#356DFB]'>Create</button>
