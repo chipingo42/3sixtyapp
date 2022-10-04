@@ -37,8 +37,10 @@ const Dashboard = () => {
           <div className='flex  space-x-36'>
             <h1 className=' font-grupo font-[400] text-[36px] leading-[35px] pt-[14px] text-[#000000]'>3Sixty</h1>
             <form className='flex items-center mt-[10px]'>
-              <MagnifyingGlassIcon  className='w-9 absolute ml-[5px] text-[#DDDDDD]'/>
-              <input type="text" placeholder='Search notes' className='pl-[50px] py-[10px] px-[50px] text-[#777777] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px] '/>
+              <label htmlFor="search">
+                <MagnifyingGlassIcon  className='w-9 absolute top-4 ml-[5px] text-[#DDDDDD]'/>
+              </label>
+              <input id='search' type="text" placeholder='Search notes' className='pl-[50px] py-[10px] px-[50px] text-[#777777] placeholder:font-roboto placeholder:font-[400] placeholder:text-[14px] placeholder:leading-[16px] '/>
             </form>
           </div>
         </div>
