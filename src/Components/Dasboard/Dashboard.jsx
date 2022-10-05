@@ -35,7 +35,7 @@ const Dashboard = () => {
       <div className='bg-[#ffffff] w-full h-[68px]'>   
         <div className='mx-[30px]'>
           <div className='flex  space-x-36'>
-            <h1 className=' font-grupo font-[400] text-[36px] leading-[35px] pt-[14px] text-[#000000]'>3Sixty</h1>
+            <h1 className='font-grupo font-[400] text-[36px] leading-[35px] pt-[14px] text-[#000000]'>3Sixty</h1>
             <form className='flex items-center mt-[10px]'>
               <label htmlFor="search">
                 <MagnifyingGlassIcon  className='w-9 absolute top-4 ml-[5px] text-[#DDDDDD]'/>
