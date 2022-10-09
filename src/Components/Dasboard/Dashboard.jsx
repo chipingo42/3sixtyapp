@@ -185,8 +185,8 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div  className='w-[100%] mt-[15px] rounded-[7px] bg-white h-[77vh]'>
-            <h1  className='pt-[41px] font-roboto font-[500] text-[48px] text-[#000000] pl-[50px] '>Learn Darts</h1>
+          <div className='w-[100%] mt-[15px] rounded-[7px] bg-white h-[77vh]'>
+            <h1 className='pt-[41px] font-roboto font-[500] text-[48px] text-[#000000] pl-[50px] '>Learn Darts</h1>
             <p className=' font-lato font-[400] text-[14px] text-[#777777] px-[40px] min-w-[400px] min-h-[182px] '>Exercitation in consectetur velit enim ullamco aliqua officia mollit eu nulla sunt aliquip aute nulla. Aliquip tempor et exercitation minim adipisicing minim velit. Id elit culpa aute est. Aute aute excepteur et adipisicing adipisicing officia dolor. Commodo incididunt ad labore incididunt aliquip deserunt anim eu incididunt est mollit. Proident aliqua non aliquip dolore sint voluptate adipisicing. Tempor in fugiat incididunt ea officia ullamco ut qui excepteur dolore ut et ut. Ut do laborum culpa consectetur duis et velit est nulla. In consectetur nisi duis ad quis magna anim ut dolor minim irure proident do irure. Sit do quis sunt consequat id incididunt quis.</p>
           </div>
           <div className='min-h-[300px] min-w-[88px]'>
