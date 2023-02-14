@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { google, or } from '../../Components'
+import { google, or } from '.'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -47,7 +47,7 @@ const Signup = ( { visible , onClose } ) => {
 
 
   return (
-    <div id='signup' onClick={signupWindow} className='absolute top-0 bg-[#00000033] w-full h-full py-[40px] overflow-y-scroll '>
+    <div id='signup' onClick={signupWindow} className='absolute top-0 bg-[#00000033] w-full h-full py-[40px] overflow-y-scroll z-20 '>
       <div className='relative left-[35%] top-[-10px] bg-[#ffffff] w-[365px] py-[7px] rounded-[10px] shadow-2xl '>
         <div className=' mx-[15px] '>
           <XMarkIcon  className='absolute right-[20px] top-[15px] w-5'  onClick={onClose}/>

@@ -1,34 +1,11 @@
-import React, { useState } from 'react'
-import { Signup, Login, dots, laptop, code, fitness }  from '../../Components'
+import React from 'react'
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline'
+import { dots, laptop, code, fitness }  from '.'
 
-
-const Navbar = () => {
-
-  const [SignUp, setSignup] = useState(false)
-  const [logIn, setLogin] = useState(false)
-
-  const handleSingnUp = () => setSignup(true);
-  const handleLogin = () => setLogin(true)
-
-  const handleSignUpClose = () => setSignup(false)
-  const handleLoginClose = () => setLogin(false)
-
-
-
+const Hero = () => {
   return (
-    <div className='bg-[#ffffff] h-full w-full '>
-      <div className=' max-w-[1200px] mx-auto '>
-        <div className='flex justify-between'>
-          <h1 className='font-grupo font-[400] text-[36px] pt-[15px] leading-[35px] '>3Sixty</h1>
-          <div className='mt-[19px]'>
-            <button className='bg-[#507EF5] px-[17px] py-[8px] rounded-l-[30px] font-roboto font-[400] text-[14px] text-[#FFFFFF] text-center ' onClick={handleLogin}>Login</button>
-            <button className='bg-[#356DFB] px-[17px] py-[8px] rounded-r-[30px]  font-roboto font-[400] text-[14px] text-[#FFFFFF] text-center ' onClick={handleSingnUp}>Sign Up</button>
-          </div>
-        </div>
-      </div>
-
-      <div className=' max-w-[1200px] mx-auto bg-[#ffffff]'>
+    <div>
+       <div className=' max-w-[1200px] mx-auto bg-[#ffffff]'>
         <div className='flex justify-between'>
           <div>
             <h1 className=' fon-san font-[600] pt-[34px] text-[48px] leading-[65px] text-[#000000] min-w-[238px] min-h-[325px]  '>You can’t really <br /> manage time, but you <br /> can take small steps <br /> that counts on a long <br /> run.</h1>
@@ -76,10 +53,8 @@ const Navbar = () => {
       </div>
       <p className='text-center font-san  font-[400] text-[11px] pt-[10px] leading-[15px] '>All Rights Reserved. 2020 @wiztemple</p>
 
-      <Signup visible={SignUp} onClose={handleSignUpClose} />
-      <Login visible={logIn}  onClose={handleLoginClose} />
     </div>
   )
 }
 
-export default Navbar;
+export default Hero

@@ -2,7 +2,8 @@ import { ArchiveBoxIcon, Cog6ToothIcon, EllipsisHorizontalIcon, MagnifyingGlassI
 import {TbNotes} from 'react-icons/tb'
 import {BsListCheck, BsTrophy} from 'react-icons/bs'
 import React, { useState } from 'react'
-import {Popup1, Popup2, CreateNote, Delete, Edit } from '../../Components'
+import {Popup1, Popup2, CreateNote, Delete, Edit } from '../Components'
+import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
 
@@ -11,7 +12,6 @@ const Dashboard = () => {
   const [createNote, setCreateNote] = useState(false)
   const [deleteNote, setDeleteNote] = useState(false)
   const [editNote, setEditNote] = useState(false)
-
 
 
 
@@ -35,7 +35,9 @@ const Dashboard = () => {
       <div className='bg-[#ffffff] w-full h-[68px]'>   
         <div className='mx-[30px]'>
           <div className='flex  space-x-36'>
-            <h1 className='font-grupo font-[400] text-[36px] leading-[35px] pt-[14px] text-[#000000]'>3Sixty</h1>
+          <Link to="/">
+            <h1 className='font-grupo font-[400] text-[36px] pt-[15px] leading-[35px] '>3Sixty</h1>
+          </Link>
             <form className='flex items-center mt-[10px]'>
               <label htmlFor="search">
                 <MagnifyingGlassIcon  className='w-9 absolute top-4 ml-[5px] text-[#DDDDDD]'/>

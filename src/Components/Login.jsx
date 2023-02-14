@@ -1,6 +1,6 @@
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import React from 'react'
-import { google, or } from '../../Components'
+import { google, or } from '.'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -36,7 +36,7 @@ const Login = ( { visible , onClose } ) => {
 
 
   return (
-    <div id='Login' onClick={LoginWindow} className='absolute top-0 bg-[#00000033] w-full h-[100vh] '>
+    <div id='Login' onClick={LoginWindow} className='absolute top-0 bg-[#00000033] w-full h-[100vh] z-20 '>
       <div className='relative left-[35%] top-[13%] bg-[#ffffff] w-[365px] h-[540px] rounded-[10px] shadow-2xl '>
         <div className=' mx-[15px] '>
           <XMarkIcon  className='absolute right-[20px] top-[15px] w-5'  onClick={onClose}/>
